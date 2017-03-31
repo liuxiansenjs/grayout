@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>grayout! - ^ - ^ </title>
+    <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="/js/underscore-modifyed.min.js"></script>
+    <link href="/imgs/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/customized.css">
+  </head>
+  <body>
+    <ul class="nav nav-tabs position-relative c-header">
+      <li class="nav-item">
+        <a class="nav-link active" href="javascript: void(0)"><img src="/imgs/grayout.png" alt="logo"></a>
+      </li>
+      <li class="nav-item res-item-hide">
+        <a class="nav-link" href="javascript: void(0)">Go Crazy!</a>
+      </li>
+      <form class="form-inline" action="submit" method="post" enctype="multipart/form-data">
+        <input class="form-control mr-2 res-item-length" type="text" name="name" placeholder="填写你的名字">
+        <span class="btn btn-outline-success mr-2" style="position: relative; padding: 7px;"><input type="file" style="width: 75px; opacity: 0; margin: 0; position: absolute;" name="photo">选择照片</span>
+        <button class="btn btn-primary my-2 my-0" type="submit">上传</button>
+      </form>
+    </ul>
+    <div class="container" id="post-it">
+      <div class="row">
+        <div class="col-12">
+          <p class="block-gray" id="refresh">最近十条动态 <a href="javascript: void(0)"><img src="/imgs/fresh.png" class="real-tiny-icon"></a></p>
+        </div>
+      </div>
+      <div id="post-html"></div>
+      <script type="text/template" id="photo-list">
+        <div class="row message">
+          <div class="col-12">
+            <div class="message-content">
+              <div class="message-head">@@= name@@</div>
+              <div class=""><img src="@@= filepath@@" class="img-fluid" alt="">
+                <div>
+                  <a href="javascript: void(0)" id="@@= 'grade_1_' + id@@"><img src="/imgs/grade.png" class="tiny-icon"></a>
+                  <a href="javascript: void(0)" id="@@= 'grade_2_' + id@@"><img src="/imgs/grade.png" class="tiny-icon"></a>
+                  <a href="javascript: void(0)" id="@@= 'grade_3_' + id@@"><img src="/imgs/grade.png" class="tiny-icon"></a>
+                  <a href="javascript: void(0)" id="@@= 'grade_4_' + id@@"><img src="/imgs/grade.png" class="tiny-icon"></a>
+                  <a href="javascript: void(0)" id="@@= 'grade_5_' + id@@"><img src="/imgs/grade.png" class="tiny-icon"></a>
+                  <span> grayout评分:@@= grade@@</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </script>
+    </div>
+
+    <script src="/js/home-page.js" charset="utf-8"></script>
+  </body>
+</html>
