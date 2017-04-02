@@ -2,6 +2,7 @@ const express = require('express');
 const url = require('url');
 const fs = require('fs');
 const gc = require('./controllers/gc.js');
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -21,4 +22,4 @@ app.get('/grade', gc.grade);
 
 app.use(express.static('public'));
 
-app.listen(3000);
+app.listen(port);
